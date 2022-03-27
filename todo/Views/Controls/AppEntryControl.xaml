@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:control="clr-namespace:todo.Views.Controls"
+    xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    x:Class="todo.Views.Controls.AppEntryControl">
+    <ContentView.Content>
+                <pv:PancakeView
+                        Margin="0,5"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        HeightRequest="80"
+                        CornerRadius="15"
+                        BackgroundColor="White">
+
+            <Grid Padding="15,0,0,0">
+                <control:BorderLessEntry
+                    x:Name="Entry"
+                    VerticalOptions="Center"
+                    TextChanged="Entry_TextChanged"/>
+
+            </Grid>
+
+            <pv:PancakeView.Border>
+                <pv:Border Thickness="2"
+                            Color="{StaticResource PrimaryColor}"/>
+
+            </pv:PancakeView.Border>
+
+            <pv:PancakeView.Shadow>
+                <pv:DropShadow
+                    Opacity="0.2"
+                    BlurRadius="10"
+                    Color="{StaticResource PrimaryColor}"
+                    Offset="0,15"/>
+
+            </pv:PancakeView.Shadow>
+
+        </pv:PancakeView>
+    </ContentView.Content>
+</ContentView>

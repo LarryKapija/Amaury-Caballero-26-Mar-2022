@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:control="clr-namespace:todo.Views.Controls"
+    BackgroundColor="{AppThemeBinding Light={StaticResource LightBackgroundColor},
+    Dark={StaticResource DarkBackgroundColor}}"
+
+    x:Class="todo.Pages.AddTaskPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand"
+            Padding="20">
+            <control:AppEntryControl
+                Placeholder="Title"
+                Text="{Binding Title}"/>
+
+            <control:AppEntryControl
+                Placeholder="Description"
+                Text="{Binding Description}"/>
+
+            <control:TextButton
+                Margin="10,0,0,0"
+                Text="Save Task"
+                Command="{Binding SaveTaskCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
