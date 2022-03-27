@@ -19,11 +19,14 @@ namespace todo.Services
                 var databasePath = DependencyService.Get<IPathService>().GetDatabasePath();
                 database = new SQLiteAsyncConnection(databasePath);
 
-                CreateTables();
             }
             catch (Exception)
             {
 
+            }
+            finally
+            {
+                CreateTables();
             }
         }
 
